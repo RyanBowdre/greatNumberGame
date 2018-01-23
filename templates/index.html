@@ -1,0 +1,28 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="/static/css?q=1280549780">
+      <style>
+        .container {
+          text-align: center;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div class="container">
+        <h1 style="background-color: pink; display: inline-block; padding: 10px">Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 and 100...</p>
+        <p>Take a guess!</p>
+        <form style="border: 1px solid black; display: inline-block; padding: 20px;"action='/process' method='POST'>
+            <input type="number" name="text" placeholder="Enter Number" required>
+            <input type="submit" value= "SUBMIT" name="choose">
+            <p>RESULTS: {{session['new_string']}}</p>
+        </form>
+        <br>
+        <br>
+        <form action='/reset' method='POST'>
+            <input type="submit" value= "CLICK HERE ONLY AFTER YOU WIN THE GAME FOR RESET" name="choose">
+        </form>
+      </div>
+    </body>
+</html>
